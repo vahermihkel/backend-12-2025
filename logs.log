@@ -1,853 +1,115 @@
-2026-01-26T13:35:58.810+02:00  INFO 14024 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Starting WebshopApplication using Java 24.0.1 with PID 14024 (C:\Users\Admin\koolitused\backend-12-2025\webshop\target\classes started by Admin in C:\Users\Admin\koolitused\backend-12-2025\webshop)
-2026-01-26T13:35:58.816+02:00  INFO 14024 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : The following 1 profile is active: "prod"
-2026-01-26T13:36:00.397+02:00  INFO 14024 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-26T13:36:00.511+02:00  INFO 14024 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 4 JPA repository interfaces.
-2026-01-26T13:36:01.278+02:00  INFO 14024 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-01-26T13:36:01.297+02:00  INFO 14024 --- [webshop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-26T13:36:01.297+02:00  INFO 14024 --- [webshop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
-2026-01-26T13:36:01.364+02:00  INFO 14024 --- [webshop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2474 ms
-2026-01-26T13:36:01.549+02:00  INFO 14024 --- [webshop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-26T13:36:01.640+02:00  INFO 14024 --- [webshop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
-2026-01-26T13:36:02.425+02:00  INFO 14024 --- [webshop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-01-26T13:36:02.505+02:00  INFO 14024 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-01-26T13:36:02.755+02:00  INFO 14024 --- [webshop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1b3bb287
-2026-01-26T13:36:02.756+02:00  INFO 14024 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-01-26T13:36:02.897+02:00  INFO 14024 --- [webshop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/veebipood]
+2026-02-02T13:35:25.405+02:00  INFO 14696 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Starting WebshopApplication using Java 24.0.1 with PID 14696 (C:\Users\Admin\koolitused\backend-12-2025\target\classes started by Admin in C:\Users\Admin\koolitused\backend-12-2025)
+2026-02-02T13:35:25.414+02:00  INFO 14696 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : The following 1 profile is active: "prod"
+2026-02-02T13:35:28.357+02:00  INFO 14696 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-02T13:35:28.364+02:00  INFO 14696 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-02T13:35:28.818+02:00  INFO 14696 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 433 ms. Found 4 JPA repository interfaces.
+2026-02-02T13:35:28.951+02:00  INFO 14696 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-02T13:35:28.954+02:00  INFO 14696 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-02-02T13:35:28.992+02:00  INFO 14696 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.CategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-02T13:35:28.994+02:00  INFO 14696 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-02T13:35:28.994+02:00  INFO 14696 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.PersonRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-02T13:35:28.996+02:00  INFO 14696 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-02T13:35:28.996+02:00  INFO 14696 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+2026-02-02T13:35:30.098+02:00  INFO 14696 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-02-02T13:35:30.128+02:00  INFO 14696 --- [webshop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-02T13:35:30.129+02:00  INFO 14696 --- [webshop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-02-02T13:35:30.244+02:00  INFO 14696 --- [webshop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 4727 ms
+2026-02-02T13:35:30.568+02:00  INFO 14696 --- [webshop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-02T13:35:30.690+02:00  INFO 14696 --- [webshop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-02-02T13:35:31.753+02:00  INFO 14696 --- [webshop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-02T13:35:31.847+02:00  INFO 14696 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-02T13:35:33.989+02:00  INFO 14696 --- [webshop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@342dc040
+2026-02-02T13:35:33.992+02:00  INFO 14696 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-02T13:35:34.940+02:00  INFO 14696 --- [webshop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://dpg-d608i5q4d50c73cn1m1g-a.virginia-postgres.render.com/veebipood_database_y7xr]
 	Database driver: PostgreSQL JDBC Driver
 	Database dialect: PostgreSQLDialect
-	Database version: 16.2
-	Default catalog/schema: veebipood/public
+	Database version: 18.1
+	Default catalog/schema: veebipood_database_y7xr/public
 	Autocommit mode: undefined/unknown
 	Isolation level: READ_COMMITTED [default READ_COMMITTED]
 	JDBC fetch size: none
 	Pool: DatasourceConnectionProviderImpl
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-01-26T13:36:05.059+02:00  INFO 14024 --- [webshop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-26T13:36:05.319+02:00  INFO 14024 --- [webshop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T13:36:05.418+02:00  INFO 14024 --- [webshop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-01-26T13:36:05.930+02:00  WARN 14024 --- [webshop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-26T13:36:06.046+02:00  WARN 14024 --- [webshop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+2026-02-02T13:35:37.309+02:00  INFO 14696 --- [webshop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-02T13:35:39.046+02:00  WARN 14696 --- [webshop] [main] org.hibernate.orm.jdbc.warn              : HHH000247: ErrorCode: 0, SQLState: 00000
+2026-02-02T13:35:39.047+02:00  WARN 14696 --- [webshop] [main] org.hibernate.orm.jdbc.warn              : constraint "uk83uplx9pk5xbms2n3lps2r1bk" of relation "orders_order_rows" does not exist, skipping
+2026-02-02T13:35:39.353+02:00  WARN 14696 --- [webshop] [main] org.hibernate.orm.jdbc.warn              : HHH000247: ErrorCode: 0, SQLState: 00000
+2026-02-02T13:35:39.354+02:00  WARN 14696 --- [webshop] [main] org.hibernate.orm.jdbc.warn              : constraint "ukfwmwi44u55bo4rvwsv0cln012" of relation "person" does not exist, skipping
+2026-02-02T13:35:39.620+02:00  WARN 14696 --- [webshop] [main] org.hibernate.orm.jdbc.warn              : HHH000247: ErrorCode: 0, SQLState: 00000
+2026-02-02T13:35:39.622+02:00  WARN 14696 --- [webshop] [main] org.hibernate.orm.jdbc.warn              : constraint "uko8tnkglv9n1eeqmo7de7em37n" of relation "person" does not exist, skipping
+2026-02-02T13:35:40.548+02:00  INFO 14696 --- [webshop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-02T13:35:40.695+02:00  INFO 14696 --- [webshop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-02T13:35:42.095+02:00  WARN 14696 --- [webshop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-02T13:35:42.276+02:00  WARN 14696 --- [webshop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: 1ac6f2ba-1452-4c8b-8a61-0d7f1976582c
+Using generated security password: cbd54e64-4095-464e-aeff-1ecc9dde90e5
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2026-01-26T13:36:06.060+02:00  INFO 14024 --- [webshop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-01-26T13:36:06.702+02:00  INFO 14024 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-01-26T13:36:06.708+02:00  INFO 14024 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Started WebshopApplication in 8.612 seconds (process running for 9.845)
-2026-01-26T13:37:12.405+02:00  INFO 14024 --- [webshop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-01-26T13:37:12.416+02:00  INFO 14024 --- [webshop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-01-26T13:37:12.422+02:00  INFO 14024 --- [webshop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T13:37:12.427+02:00  INFO 14024 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-01-26T13:37:12.431+02:00  INFO 14024 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-01-26T13:37:18.128+02:00  INFO 24372 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Starting WebshopApplication using Java 24.0.1 with PID 24372 (C:\Users\Admin\koolitused\backend-12-2025\webshop\target\classes started by Admin in C:\Users\Admin\koolitused\backend-12-2025\webshop)
-2026-01-26T13:37:18.133+02:00  INFO 24372 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : The following 1 profile is active: "prod"
-2026-01-26T13:37:19.036+02:00  INFO 24372 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-26T13:37:19.113+02:00  INFO 24372 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 4 JPA repository interfaces.
-2026-01-26T13:37:19.676+02:00  INFO 24372 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-01-26T13:37:19.693+02:00  INFO 24372 --- [webshop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-26T13:37:19.693+02:00  INFO 24372 --- [webshop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
-2026-01-26T13:37:19.743+02:00  INFO 24372 --- [webshop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1517 ms
-2026-01-26T13:37:19.874+02:00  INFO 24372 --- [webshop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-26T13:37:19.937+02:00  INFO 24372 --- [webshop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
-2026-01-26T13:37:20.478+02:00  INFO 24372 --- [webshop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-01-26T13:37:20.512+02:00  INFO 24372 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-01-26T13:37:20.686+02:00  INFO 24372 --- [webshop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@771cbd13
-2026-01-26T13:37:20.689+02:00  INFO 24372 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-01-26T13:37:20.769+02:00  INFO 24372 --- [webshop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/veebipood]
+2026-02-02T13:35:42.295+02:00  INFO 14696 --- [webshop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-02-02T13:35:43.540+02:00  INFO 14696 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-02-02T13:35:43.561+02:00  INFO 14696 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Started WebshopApplication in 19.087 seconds (process running for 22.209)
+2026-02-02T13:47:41.631+02:00  INFO 14696 --- [webshop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-02T13:47:41.644+02:00  INFO 14696 --- [webshop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-02-02T13:47:41.677+02:00  INFO 14696 --- [webshop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-02T13:47:41.684+02:00  INFO 14696 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-02T13:47:43.015+02:00  INFO 14696 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-02-02T13:47:45.757+02:00  INFO 12340 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Starting WebshopApplication using Java 24.0.1 with PID 12340 (C:\Users\Admin\koolitused\backend-12-2025\target\classes started by Admin in C:\Users\Admin\koolitused\backend-12-2025)
+2026-02-02T13:47:45.762+02:00  INFO 12340 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : The following 1 profile is active: "prod"
+2026-02-02T13:47:46.672+02:00  INFO 12340 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-02T13:47:46.674+02:00  INFO 12340 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-02T13:47:46.882+02:00  INFO 12340 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 196 ms. Found 4 JPA repository interfaces.
+2026-02-02T13:47:46.937+02:00  INFO 12340 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-02T13:47:46.938+02:00  INFO 12340 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-02-02T13:47:46.955+02:00  INFO 12340 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.CategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-02T13:47:46.958+02:00  INFO 12340 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-02T13:47:46.958+02:00  INFO 12340 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.PersonRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-02T13:47:46.959+02:00  INFO 12340 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-02T13:47:46.959+02:00  INFO 12340 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2026-02-02T13:47:47.579+02:00  INFO 12340 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-02-02T13:47:47.596+02:00  INFO 12340 --- [webshop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-02T13:47:47.597+02:00  INFO 12340 --- [webshop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-02-02T13:47:47.661+02:00  INFO 12340 --- [webshop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1828 ms
+2026-02-02T13:47:47.836+02:00  INFO 12340 --- [webshop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-02T13:47:47.898+02:00  INFO 12340 --- [webshop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-02-02T13:47:48.419+02:00  INFO 12340 --- [webshop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-02T13:47:48.458+02:00  INFO 12340 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-02T13:47:50.495+02:00  INFO 12340 --- [webshop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@65f470f8
+2026-02-02T13:47:50.498+02:00  INFO 12340 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-02T13:47:51.541+02:00  INFO 12340 --- [webshop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://dpg-d608i5q4d50c73cn1m1g-a.virginia-postgres.render.com/veebipood_database_y7xr]
 	Database driver: PostgreSQL JDBC Driver
 	Database dialect: PostgreSQLDialect
-	Database version: 16.2
-	Default catalog/schema: veebipood/public
+	Database version: 18.1
+	Default catalog/schema: veebipood_database_y7xr/public
 	Autocommit mode: undefined/unknown
 	Isolation level: READ_COMMITTED [default READ_COMMITTED]
 	JDBC fetch size: none
 	Pool: DatasourceConnectionProviderImpl
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-01-26T13:37:22.092+02:00  INFO 24372 --- [webshop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-26T13:37:22.262+02:00  INFO 24372 --- [webshop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T13:37:22.336+02:00  INFO 24372 --- [webshop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-01-26T13:37:22.733+02:00  WARN 24372 --- [webshop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-26T13:37:22.825+02:00  WARN 24372 --- [webshop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+2026-02-02T13:47:53.442+02:00  INFO 12340 --- [webshop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-02T13:47:57.967+02:00  INFO 12340 --- [webshop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-02T13:47:58.075+02:00  INFO 12340 --- [webshop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-02T13:47:59.123+02:00  WARN 12340 --- [webshop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-02T13:47:59.260+02:00  WARN 12340 --- [webshop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: a229ef2d-5947-4fa7-9a2c-9f12f9b58a51
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-01-26T13:37:22.835+02:00  INFO 24372 --- [webshop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-01-26T13:37:23.500+02:00  INFO 24372 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-01-26T13:37:23.509+02:00  INFO 24372 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Started WebshopApplication in 6.023 seconds (process running for 7.018)
-2026-01-26T13:42:27.010+02:00  INFO 24372 --- [webshop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-01-26T13:42:27.023+02:00  INFO 24372 --- [webshop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-01-26T13:42:27.031+02:00  INFO 24372 --- [webshop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T13:42:27.034+02:00  INFO 24372 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-01-26T13:42:27.038+02:00  INFO 24372 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-01-26T13:42:33.027+02:00  INFO 12336 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Starting WebshopApplication using Java 24.0.1 with PID 12336 (C:\Users\Admin\koolitused\backend-12-2025\webshop\target\classes started by Admin in C:\Users\Admin\koolitused\backend-12-2025\webshop)
-2026-01-26T13:42:33.034+02:00  INFO 12336 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : The following 1 profile is active: "prod"
-2026-01-26T13:42:33.983+02:00  INFO 12336 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-26T13:42:34.063+02:00  INFO 12336 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 4 JPA repository interfaces.
-2026-01-26T13:42:34.709+02:00  INFO 12336 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-01-26T13:42:34.725+02:00  INFO 12336 --- [webshop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-26T13:42:34.725+02:00  INFO 12336 --- [webshop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
-2026-01-26T13:42:34.805+02:00  INFO 12336 --- [webshop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1696 ms
-2026-01-26T13:42:34.990+02:00  INFO 12336 --- [webshop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-26T13:42:35.052+02:00  INFO 12336 --- [webshop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
-2026-01-26T13:42:35.631+02:00  INFO 12336 --- [webshop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-01-26T13:42:35.670+02:00  INFO 12336 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-01-26T13:42:35.854+02:00  INFO 12336 --- [webshop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@25dad235
-2026-01-26T13:42:35.856+02:00  INFO 12336 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-01-26T13:42:35.944+02:00  INFO 12336 --- [webshop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/veebipood]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 16.2
-	Default catalog/schema: veebipood/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DatasourceConnectionProviderImpl
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-01-26T13:42:37.625+02:00  INFO 12336 --- [webshop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-26T13:42:37.805+02:00  INFO 12336 --- [webshop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T13:42:37.901+02:00  INFO 12336 --- [webshop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-01-26T13:42:38.365+02:00  WARN 12336 --- [webshop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-26T13:42:38.475+02:00  WARN 12336 --- [webshop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: a20fa061-5433-4d39-88fa-2c681c09ec53
+Using generated security password: 5e0d19e8-d670-4c23-b5f5-a981584b77df
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2026-01-26T13:42:38.484+02:00  INFO 12336 --- [webshop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-01-26T13:42:39.067+02:00  INFO 12336 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-01-26T13:42:39.078+02:00  INFO 12336 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Started WebshopApplication in 6.771 seconds (process running for 7.827)
-2026-01-26T14:21:10.258+02:00  INFO 12336 --- [webshop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-01-26T14:21:10.273+02:00  INFO 12336 --- [webshop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-01-26T14:21:10.284+02:00  INFO 12336 --- [webshop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T14:21:10.288+02:00  INFO 12336 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-01-26T14:21:10.297+02:00  INFO 12336 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-01-26T14:21:24.553+02:00  INFO 28324 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Starting WebshopApplication using Java 24.0.1 with PID 28324 (C:\Users\Admin\koolitused\backend-12-2025\webshop\target\classes started by Admin in C:\Users\Admin\koolitused\backend-12-2025\webshop)
-2026-01-26T14:21:24.557+02:00  INFO 28324 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : The following 1 profile is active: "prod"
-2026-01-26T14:21:25.864+02:00  INFO 28324 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-26T14:21:25.948+02:00  INFO 28324 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 4 JPA repository interfaces.
-2026-01-26T14:21:26.623+02:00  INFO 28324 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-01-26T14:21:26.643+02:00  INFO 28324 --- [webshop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-26T14:21:26.643+02:00  INFO 28324 --- [webshop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
-2026-01-26T14:21:26.703+02:00  INFO 28324 --- [webshop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2083 ms
-2026-01-26T14:21:26.894+02:00  INFO 28324 --- [webshop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-26T14:21:26.956+02:00  INFO 28324 --- [webshop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
-2026-01-26T14:21:27.566+02:00  INFO 28324 --- [webshop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-01-26T14:21:27.608+02:00  INFO 28324 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-01-26T14:21:27.831+02:00  INFO 28324 --- [webshop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7c840fe3
-2026-01-26T14:21:27.834+02:00  INFO 28324 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-01-26T14:21:27.916+02:00  INFO 28324 --- [webshop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/veebipood]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 16.2
-	Default catalog/schema: veebipood/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DatasourceConnectionProviderImpl
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-01-26T14:21:29.386+02:00  INFO 28324 --- [webshop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-26T14:21:29.596+02:00  INFO 28324 --- [webshop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T14:21:29.695+02:00  INFO 28324 --- [webshop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-01-26T14:21:30.242+02:00  WARN 28324 --- [webshop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-26T14:21:30.366+02:00  WARN 28324 --- [webshop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+2026-02-02T13:47:59.271+02:00  INFO 12340 --- [webshop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-02-02T13:48:00.189+02:00  INFO 12340 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-02-02T13:48:00.206+02:00  INFO 12340 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Started WebshopApplication in 15.119 seconds (process running for 16.174)
+2026-02-02T13:48:58.996+02:00  INFO 12340 --- [webshop] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-02T13:48:58.997+02:00  INFO 12340 --- [webshop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-02T13:48:59.000+02:00  INFO 12340 --- [webshop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-02-02T13:49:00.441+02:00  WARN 12340 --- [webshop] [http-nio-8080-exec-1] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
 
-Using generated security password: 2b5a0414-41ac-4203-bab0-166df970f939
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-01-26T14:21:30.378+02:00  INFO 28324 --- [webshop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-01-26T14:21:31.128+02:00  INFO 28324 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-01-26T14:21:31.144+02:00  INFO 28324 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Started WebshopApplication in 7.264 seconds (process running for 8.296)
-2026-01-26T14:21:35.114+02:00  INFO 28324 --- [webshop] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-01-26T14:21:35.114+02:00  INFO 28324 --- [webshop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-01-26T14:21:35.116+02:00  INFO 28324 --- [webshop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-01-26T14:23:28.878+02:00  INFO 28324 --- [webshop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-01-26T14:23:28.889+02:00  INFO 28324 --- [webshop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-01-26T14:23:28.895+02:00  INFO 28324 --- [webshop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T14:23:28.900+02:00  INFO 28324 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-01-26T14:23:28.904+02:00  INFO 28324 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-01-26T14:23:34.714+02:00  INFO 27736 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Starting WebshopApplication using Java 24.0.1 with PID 27736 (C:\Users\Admin\koolitused\backend-12-2025\webshop\target\classes started by Admin in C:\Users\Admin\koolitused\backend-12-2025\webshop)
-2026-01-26T14:23:34.719+02:00  INFO 27736 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : The following 1 profile is active: "prod"
-2026-01-26T14:23:35.632+02:00  INFO 27736 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-26T14:23:35.703+02:00  INFO 27736 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 4 JPA repository interfaces.
-2026-01-26T14:23:36.282+02:00  INFO 27736 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-01-26T14:23:36.299+02:00  INFO 27736 --- [webshop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-26T14:23:36.300+02:00  INFO 27736 --- [webshop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
-2026-01-26T14:23:36.368+02:00  INFO 27736 --- [webshop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1583 ms
-2026-01-26T14:23:36.512+02:00  INFO 27736 --- [webshop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-26T14:23:36.576+02:00  INFO 27736 --- [webshop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
-2026-01-26T14:23:37.105+02:00  INFO 27736 --- [webshop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-01-26T14:23:37.140+02:00  INFO 27736 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-01-26T14:23:37.346+02:00  INFO 27736 --- [webshop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7c840fe3
-2026-01-26T14:23:37.349+02:00  INFO 27736 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-01-26T14:23:37.427+02:00  INFO 27736 --- [webshop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/veebipood]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 16.2
-	Default catalog/schema: veebipood/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DatasourceConnectionProviderImpl
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-01-26T14:23:38.959+02:00  INFO 27736 --- [webshop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-26T14:23:39.177+02:00  INFO 27736 --- [webshop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T14:23:39.271+02:00  INFO 27736 --- [webshop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-01-26T14:23:39.787+02:00  WARN 27736 --- [webshop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-26T14:23:39.902+02:00  WARN 27736 --- [webshop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: a77d3d6b-a457-427a-9ec0-f9ae801ff4a4
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-01-26T14:23:39.914+02:00  INFO 27736 --- [webshop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-01-26T14:23:40.561+02:00  INFO 27736 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-01-26T14:23:40.571+02:00  INFO 27736 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Started WebshopApplication in 6.47 seconds (process running for 7.463)
-2026-01-26T15:01:45.942+02:00  INFO 27736 --- [webshop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-01-26T15:01:45.956+02:00  INFO 27736 --- [webshop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-01-26T15:01:45.963+02:00  INFO 27736 --- [webshop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T15:01:45.968+02:00  INFO 27736 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-01-26T15:01:45.974+02:00  INFO 27736 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-01-26T15:01:53.198+02:00  INFO 6804 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Starting WebshopApplication using Java 24.0.1 with PID 6804 (C:\Users\Admin\koolitused\backend-12-2025\webshop\target\classes started by Admin in C:\Users\Admin\koolitused\backend-12-2025\webshop)
-2026-01-26T15:01:53.203+02:00  INFO 6804 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : The following 1 profile is active: "prod"
-2026-01-26T15:01:54.209+02:00  INFO 6804 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-26T15:01:54.292+02:00  INFO 6804 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 4 JPA repository interfaces.
-2026-01-26T15:01:54.938+02:00  INFO 6804 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-01-26T15:01:54.955+02:00  INFO 6804 --- [webshop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-26T15:01:54.955+02:00  INFO 6804 --- [webshop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
-2026-01-26T15:01:55.025+02:00  INFO 6804 --- [webshop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1743 ms
-2026-01-26T15:01:55.183+02:00  INFO 6804 --- [webshop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-26T15:01:55.252+02:00  INFO 6804 --- [webshop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
-2026-01-26T15:01:55.812+02:00  INFO 6804 --- [webshop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-01-26T15:01:55.853+02:00  INFO 6804 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-01-26T15:01:56.052+02:00  INFO 6804 --- [webshop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6ad3fbe4
-2026-01-26T15:01:56.054+02:00  INFO 6804 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-01-26T15:01:56.140+02:00  INFO 6804 --- [webshop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/veebipood]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 16.2
-	Default catalog/schema: veebipood/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DatasourceConnectionProviderImpl
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-01-26T15:01:57.558+02:00  INFO 6804 --- [webshop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-26T15:01:57.751+02:00  INFO 6804 --- [webshop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T15:01:57.845+02:00  INFO 6804 --- [webshop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-01-26T15:01:58.337+02:00  WARN 6804 --- [webshop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-26T15:01:58.438+02:00  WARN 6804 --- [webshop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: d8c2018c-b887-45bd-880a-288ebc27ad79
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-01-26T15:01:58.449+02:00  INFO 6804 --- [webshop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-01-26T15:01:59.090+02:00  INFO 6804 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-01-26T15:01:59.105+02:00  INFO 6804 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Started WebshopApplication in 6.528 seconds (process running for 7.551)
-2026-01-26T15:22:22.609+02:00  INFO 6804 --- [webshop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-01-26T15:22:22.621+02:00  INFO 6804 --- [webshop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-01-26T15:22:22.632+02:00  INFO 6804 --- [webshop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T15:22:22.637+02:00  INFO 6804 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-01-26T15:22:22.646+02:00  INFO 6804 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-01-26T15:22:37.599+02:00  INFO 12740 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Starting WebshopApplication using Java 24.0.1 with PID 12740 (C:\Users\Admin\koolitused\backend-12-2025\webshop\target\classes started by Admin in C:\Users\Admin\koolitused\backend-12-2025\webshop)
-2026-01-26T15:22:37.601+02:00  INFO 12740 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : The following 1 profile is active: "prod"
-2026-01-26T15:22:38.730+02:00  INFO 12740 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-01-26T15:22:38.733+02:00  INFO 12740 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-26T15:22:38.913+02:00  INFO 12740 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 168 ms. Found 4 JPA repository interfaces.
-2026-01-26T15:22:38.971+02:00  INFO 12740 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-01-26T15:22:38.973+02:00  INFO 12740 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2026-01-26T15:22:39.003+02:00  INFO 12740 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.CategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:22:39.005+02:00  INFO 12740 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:22:39.006+02:00  INFO 12740 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.PersonRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:22:39.006+02:00  INFO 12740 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:22:39.006+02:00  INFO 12740 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
-2026-01-26T15:22:39.778+02:00  INFO 12740 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-01-26T15:22:39.798+02:00  INFO 12740 --- [webshop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-26T15:22:39.799+02:00  INFO 12740 --- [webshop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
-2026-01-26T15:22:39.856+02:00  INFO 12740 --- [webshop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2193 ms
-2026-01-26T15:22:40.034+02:00  INFO 12740 --- [webshop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-26T15:22:40.106+02:00  INFO 12740 --- [webshop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
-2026-01-26T15:22:40.667+02:00  INFO 12740 --- [webshop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-01-26T15:22:40.707+02:00  INFO 12740 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-01-26T15:22:40.887+02:00  INFO 12740 --- [webshop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@782dc5
-2026-01-26T15:22:40.890+02:00  INFO 12740 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-01-26T15:22:41.000+02:00  INFO 12740 --- [webshop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/veebipood]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 16.2
-	Default catalog/schema: veebipood/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DatasourceConnectionProviderImpl
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-01-26T15:22:42.527+02:00  INFO 12740 --- [webshop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-26T15:22:42.710+02:00  INFO 12740 --- [webshop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T15:22:42.800+02:00  INFO 12740 --- [webshop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-01-26T15:22:43.351+02:00  WARN 12740 --- [webshop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-26T15:22:43.466+02:00  WARN 12740 --- [webshop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 4c4cfa35-d857-4541-9924-641ae27b84ad
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-01-26T15:22:43.475+02:00  INFO 12740 --- [webshop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-01-26T15:22:44.555+02:00  WARN 12740 --- [webshop] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.cache.CacheManager' available: no CacheResolver specified - register a CacheManager bean or remove the @EnableCaching annotation from your configuration.
-2026-01-26T15:22:44.570+02:00  INFO 12740 --- [webshop] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T15:22:44.575+02:00  INFO 12740 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-01-26T15:22:44.578+02:00  INFO 12740 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-01-26T15:22:44.584+02:00  INFO 12740 --- [webshop] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-01-26T15:22:44.596+02:00  INFO 12740 --- [webshop] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-01-26T15:22:44.620+02:00 ERROR 12740 --- [webshop] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-A component required a bean of type 'org.springframework.cache.CacheManager' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'org.springframework.cache.CacheManager' in your configuration.
-
-2026-01-26T15:24:40.498+02:00  INFO 28828 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Starting WebshopApplication using Java 24.0.1 with PID 28828 (C:\Users\Admin\koolitused\backend-12-2025\webshop\target\classes started by Admin in C:\Users\Admin\koolitused\backend-12-2025\webshop)
-2026-01-26T15:24:40.502+02:00  INFO 28828 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : The following 1 profile is active: "prod"
-2026-01-26T15:24:41.582+02:00  INFO 28828 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-01-26T15:24:41.585+02:00  INFO 28828 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-26T15:24:41.806+02:00  INFO 28828 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 210 ms. Found 4 JPA repository interfaces.
-2026-01-26T15:24:41.876+02:00  INFO 28828 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-01-26T15:24:41.878+02:00  INFO 28828 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2026-01-26T15:24:41.906+02:00  INFO 28828 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.CategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:24:41.908+02:00  INFO 28828 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:24:41.908+02:00  INFO 28828 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.PersonRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:24:41.908+02:00  INFO 28828 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:24:41.910+02:00  INFO 28828 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
-2026-01-26T15:24:42.677+02:00  INFO 28828 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-01-26T15:24:42.693+02:00  INFO 28828 --- [webshop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-26T15:24:42.695+02:00  INFO 28828 --- [webshop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
-2026-01-26T15:24:42.758+02:00  INFO 28828 --- [webshop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2177 ms
-2026-01-26T15:24:42.926+02:00  INFO 28828 --- [webshop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-26T15:24:43.021+02:00  INFO 28828 --- [webshop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
-2026-01-26T15:24:43.657+02:00  INFO 28828 --- [webshop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-01-26T15:24:43.708+02:00  INFO 28828 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-01-26T15:24:43.951+02:00  INFO 28828 --- [webshop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@34e4fb39
-2026-01-26T15:24:43.953+02:00  INFO 28828 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-01-26T15:24:44.038+02:00  INFO 28828 --- [webshop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/veebipood]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 16.2
-	Default catalog/schema: veebipood/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DatasourceConnectionProviderImpl
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-01-26T15:24:45.492+02:00  INFO 28828 --- [webshop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-26T15:24:45.672+02:00  INFO 28828 --- [webshop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T15:24:45.773+02:00  INFO 28828 --- [webshop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-01-26T15:24:46.396+02:00  WARN 28828 --- [webshop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-26T15:24:46.518+02:00  WARN 28828 --- [webshop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 9406cc71-b492-482e-aeff-ad3801b805f6
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-01-26T15:24:46.528+02:00  INFO 28828 --- [webshop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-01-26T15:24:47.598+02:00  WARN 28828 --- [webshop] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.cache.CacheManager' available: no CacheResolver specified - register a CacheManager bean or remove the @EnableCaching annotation from your configuration.
-2026-01-26T15:24:47.624+02:00  INFO 28828 --- [webshop] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T15:24:47.627+02:00  INFO 28828 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-01-26T15:24:47.632+02:00  INFO 28828 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-01-26T15:24:47.637+02:00  INFO 28828 --- [webshop] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-01-26T15:24:47.651+02:00  INFO 28828 --- [webshop] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-01-26T15:24:47.675+02:00 ERROR 28828 --- [webshop] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-A component required a bean of type 'org.springframework.cache.CacheManager' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'org.springframework.cache.CacheManager' in your configuration.
-
-2026-01-26T15:27:50.607+02:00  INFO 14492 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Starting WebshopApplication using Java 24.0.1 with PID 14492 (C:\Users\Admin\koolitused\backend-12-2025\webshop\target\classes started by Admin in C:\Users\Admin\koolitused\backend-12-2025\webshop)
-2026-01-26T15:27:50.610+02:00  INFO 14492 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : The following 1 profile is active: "prod"
-2026-01-26T15:27:51.549+02:00  INFO 14492 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-01-26T15:27:51.551+02:00  INFO 14492 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-26T15:27:51.725+02:00  INFO 14492 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 163 ms. Found 4 JPA repository interfaces.
-2026-01-26T15:27:51.781+02:00  INFO 14492 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-01-26T15:27:51.783+02:00  INFO 14492 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2026-01-26T15:27:51.804+02:00  INFO 14492 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.CategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:27:51.807+02:00  INFO 14492 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:27:51.807+02:00  INFO 14492 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.PersonRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:27:51.807+02:00  INFO 14492 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:27:51.807+02:00  INFO 14492 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
-2026-01-26T15:27:52.495+02:00  INFO 14492 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-01-26T15:27:52.509+02:00  INFO 14492 --- [webshop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-26T15:27:52.509+02:00  INFO 14492 --- [webshop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
-2026-01-26T15:27:52.569+02:00  INFO 14492 --- [webshop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1875 ms
-2026-01-26T15:27:52.753+02:00  INFO 14492 --- [webshop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-26T15:27:52.837+02:00  INFO 14492 --- [webshop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
-2026-01-26T15:27:53.375+02:00  INFO 14492 --- [webshop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-01-26T15:27:53.414+02:00  INFO 14492 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-01-26T15:27:53.603+02:00  INFO 14492 --- [webshop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@683fac7e
-2026-01-26T15:27:53.606+02:00  INFO 14492 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-01-26T15:27:53.691+02:00  INFO 14492 --- [webshop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/veebipood]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 16.2
-	Default catalog/schema: veebipood/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DatasourceConnectionProviderImpl
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-01-26T15:27:55.068+02:00  INFO 14492 --- [webshop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-26T15:27:55.239+02:00  INFO 14492 --- [webshop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T15:27:55.333+02:00  INFO 14492 --- [webshop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-01-26T15:27:56.169+02:00  WARN 14492 --- [webshop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-26T15:27:56.286+02:00  WARN 14492 --- [webshop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 9f245a1e-f419-4fe9-9487-e5e73d786294
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-01-26T15:27:56.294+02:00  INFO 14492 --- [webshop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-01-26T15:27:57.067+02:00  INFO 14492 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-01-26T15:27:57.081+02:00  INFO 14492 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Started WebshopApplication in 7.081 seconds (process running for 8.075)
-2026-01-26T15:29:18.109+02:00  INFO 14492 --- [webshop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-01-26T15:29:18.120+02:00  INFO 14492 --- [webshop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-01-26T15:29:18.148+02:00  INFO 14492 --- [webshop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T15:29:18.151+02:00  INFO 14492 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-01-26T15:29:18.153+02:00  INFO 14492 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-01-26T15:29:24.303+02:00  INFO 16704 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Starting WebshopApplication using Java 24.0.1 with PID 16704 (C:\Users\Admin\koolitused\backend-12-2025\webshop\target\classes started by Admin in C:\Users\Admin\koolitused\backend-12-2025\webshop)
-2026-01-26T15:29:24.308+02:00  INFO 16704 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : The following 1 profile is active: "prod"
-2026-01-26T15:29:25.311+02:00  INFO 16704 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-01-26T15:29:25.313+02:00  INFO 16704 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-26T15:29:25.517+02:00  INFO 16704 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 185 ms. Found 4 JPA repository interfaces.
-2026-01-26T15:29:25.584+02:00  INFO 16704 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-01-26T15:29:25.586+02:00  INFO 16704 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2026-01-26T15:29:25.608+02:00  INFO 16704 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.CategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:29:25.612+02:00  INFO 16704 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:29:25.613+02:00  INFO 16704 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.PersonRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:29:25.614+02:00  INFO 16704 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:29:25.614+02:00  INFO 16704 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
-2026-01-26T15:29:26.482+02:00  INFO 16704 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-01-26T15:29:26.501+02:00  INFO 16704 --- [webshop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-26T15:29:26.501+02:00  INFO 16704 --- [webshop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
-2026-01-26T15:29:26.580+02:00  INFO 16704 --- [webshop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2202 ms
-2026-01-26T15:29:26.813+02:00  INFO 16704 --- [webshop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-26T15:29:26.885+02:00  INFO 16704 --- [webshop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
-2026-01-26T15:29:27.693+02:00  INFO 16704 --- [webshop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-01-26T15:29:27.743+02:00  INFO 16704 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-01-26T15:29:27.972+02:00  INFO 16704 --- [webshop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6705b763
-2026-01-26T15:29:27.978+02:00  INFO 16704 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-01-26T15:29:28.065+02:00  INFO 16704 --- [webshop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/veebipood]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 16.2
-	Default catalog/schema: veebipood/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DatasourceConnectionProviderImpl
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-01-26T15:29:29.637+02:00  INFO 16704 --- [webshop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-26T15:29:29.818+02:00  INFO 16704 --- [webshop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T15:29:29.918+02:00  INFO 16704 --- [webshop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-01-26T15:29:30.836+02:00  WARN 16704 --- [webshop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-26T15:29:30.957+02:00  WARN 16704 --- [webshop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: c4218e95-cb79-4df4-8a99-abc109961a4f
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-01-26T15:29:30.968+02:00  INFO 16704 --- [webshop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-01-26T15:29:31.790+02:00  INFO 16704 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-01-26T15:29:31.805+02:00  INFO 16704 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Started WebshopApplication in 8.183 seconds (process running for 9.329)
-2026-01-26T15:29:33.005+02:00  INFO 16704 --- [webshop] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-01-26T15:29:33.005+02:00  INFO 16704 --- [webshop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-01-26T15:29:33.006+02:00  INFO 16704 --- [webshop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-01-26T15:43:57.881+02:00  INFO 16704 --- [webshop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-01-26T15:43:57.896+02:00  INFO 16704 --- [webshop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-01-26T15:43:57.919+02:00  INFO 16704 --- [webshop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T15:43:57.924+02:00  INFO 16704 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-01-26T15:43:57.928+02:00  INFO 16704 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-01-26T15:44:06.527+02:00  INFO 33024 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Starting WebshopApplication using Java 24.0.1 with PID 33024 (C:\Users\Admin\koolitused\backend-12-2025\webshop\target\classes started by Admin in C:\Users\Admin\koolitused\backend-12-2025\webshop)
-2026-01-26T15:44:06.533+02:00  INFO 33024 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : The following 1 profile is active: "prod"
-2026-01-26T15:44:07.821+02:00  INFO 33024 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-01-26T15:44:07.823+02:00  INFO 33024 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-26T15:44:08.037+02:00  INFO 33024 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 201 ms. Found 4 JPA repository interfaces.
-2026-01-26T15:44:08.104+02:00  INFO 33024 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-01-26T15:44:08.106+02:00  INFO 33024 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2026-01-26T15:44:08.127+02:00  INFO 33024 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.CategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:44:08.130+02:00  INFO 33024 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:44:08.131+02:00  INFO 33024 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.PersonRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:44:08.131+02:00  INFO 33024 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:44:08.131+02:00  INFO 33024 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
-2026-01-26T15:44:09.028+02:00  INFO 33024 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-01-26T15:44:09.052+02:00  INFO 33024 --- [webshop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-26T15:44:09.054+02:00  INFO 33024 --- [webshop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
-2026-01-26T15:44:09.147+02:00  INFO 33024 --- [webshop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2481 ms
-2026-01-26T15:44:09.427+02:00  INFO 33024 --- [webshop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-26T15:44:09.536+02:00  INFO 33024 --- [webshop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
-2026-01-26T15:44:10.361+02:00  INFO 33024 --- [webshop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-01-26T15:44:10.436+02:00  INFO 33024 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-01-26T15:44:10.754+02:00  INFO 33024 --- [webshop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@683fac7e
-2026-01-26T15:44:10.759+02:00  INFO 33024 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-01-26T15:44:10.928+02:00  INFO 33024 --- [webshop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/veebipood]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 16.2
-	Default catalog/schema: veebipood/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DatasourceConnectionProviderImpl
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-01-26T15:44:13.096+02:00  INFO 33024 --- [webshop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-26T15:44:13.330+02:00  INFO 33024 --- [webshop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T15:44:13.482+02:00  INFO 33024 --- [webshop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-01-26T15:44:14.953+02:00  WARN 33024 --- [webshop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-26T15:44:15.157+02:00  WARN 33024 --- [webshop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 03511e8f-b51b-4416-a843-c1541fff5a5d
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-01-26T15:44:15.176+02:00  INFO 33024 --- [webshop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-01-26T15:44:16.787+02:00  INFO 33024 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-01-26T15:44:16.815+02:00  INFO 33024 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Started WebshopApplication in 11.1 seconds (process running for 12.093)
-2026-01-26T15:44:16.969+02:00  INFO 33024 --- [webshop] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-01-26T15:44:16.969+02:00  INFO 33024 --- [webshop] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-01-26T15:44:16.971+02:00  INFO 33024 --- [webshop] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-01-26T15:46:34.511+02:00  INFO 33024 --- [webshop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-01-26T15:46:34.526+02:00  INFO 33024 --- [webshop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-01-26T15:46:34.555+02:00  INFO 33024 --- [webshop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T15:46:34.560+02:00  INFO 33024 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-01-26T15:46:34.562+02:00  INFO 33024 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-01-26T15:46:40.538+02:00  INFO 21052 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Starting WebshopApplication using Java 24.0.1 with PID 21052 (C:\Users\Admin\koolitused\backend-12-2025\webshop\target\classes started by Admin in C:\Users\Admin\koolitused\backend-12-2025\webshop)
-2026-01-26T15:46:40.543+02:00  INFO 21052 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : The following 1 profile is active: "prod"
-2026-01-26T15:46:41.562+02:00  INFO 21052 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-01-26T15:46:41.564+02:00  INFO 21052 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-26T15:46:41.741+02:00  INFO 21052 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 166 ms. Found 4 JPA repository interfaces.
-2026-01-26T15:46:41.796+02:00  INFO 21052 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-01-26T15:46:41.798+02:00  INFO 21052 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2026-01-26T15:46:41.825+02:00  INFO 21052 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.CategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:46:41.828+02:00  INFO 21052 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:46:41.828+02:00  INFO 21052 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.PersonRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:46:41.828+02:00  INFO 21052 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:46:41.829+02:00  INFO 21052 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
-2026-01-26T15:46:42.558+02:00  INFO 21052 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-01-26T15:46:42.576+02:00  INFO 21052 --- [webshop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-26T15:46:42.576+02:00  INFO 21052 --- [webshop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
-2026-01-26T15:46:42.639+02:00  INFO 21052 --- [webshop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2007 ms
-2026-01-26T15:46:42.828+02:00  INFO 21052 --- [webshop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-26T15:46:42.903+02:00  INFO 21052 --- [webshop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
-2026-01-26T15:46:43.443+02:00  INFO 21052 --- [webshop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-01-26T15:46:43.496+02:00  INFO 21052 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-01-26T15:46:43.713+02:00  INFO 21052 --- [webshop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4f98ac31
-2026-01-26T15:46:43.716+02:00  INFO 21052 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-01-26T15:46:43.807+02:00  INFO 21052 --- [webshop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/veebipood]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 16.2
-	Default catalog/schema: veebipood/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DatasourceConnectionProviderImpl
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-01-26T15:46:45.638+02:00  INFO 21052 --- [webshop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-26T15:46:45.860+02:00  INFO 21052 --- [webshop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T15:46:45.983+02:00  INFO 21052 --- [webshop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-01-26T15:46:47.374+02:00  WARN 21052 --- [webshop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-26T15:46:47.550+02:00  WARN 21052 --- [webshop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 9973dc2a-838e-47e3-adee-ddc01baba330
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-01-26T15:46:47.562+02:00  INFO 21052 --- [webshop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-01-26T15:46:48.562+02:00  INFO 21052 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-01-26T15:46:48.577+02:00  INFO 21052 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Started WebshopApplication in 8.693 seconds (process running for 9.886)
-2026-01-26T15:47:04.082+02:00  INFO 21052 --- [webshop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-01-26T15:47:04.096+02:00  INFO 21052 --- [webshop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-01-26T15:47:04.124+02:00  INFO 21052 --- [webshop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T15:47:04.128+02:00  INFO 21052 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-01-26T15:47:04.134+02:00  INFO 21052 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-01-26T15:47:07.829+02:00  INFO 32196 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Starting WebshopApplication using Java 24.0.1 with PID 32196 (C:\Users\Admin\koolitused\backend-12-2025\webshop\target\classes started by Admin in C:\Users\Admin\koolitused\backend-12-2025\webshop)
-2026-01-26T15:47:07.835+02:00  INFO 32196 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : The following 1 profile is active: "prod"
-2026-01-26T15:47:08.996+02:00  INFO 32196 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-01-26T15:47:08.998+02:00  INFO 32196 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-26T15:47:09.274+02:00  INFO 32196 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 263 ms. Found 4 JPA repository interfaces.
-2026-01-26T15:47:09.348+02:00  INFO 32196 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-01-26T15:47:09.351+02:00  INFO 32196 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2026-01-26T15:47:09.379+02:00  INFO 32196 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.CategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:47:09.381+02:00  INFO 32196 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:47:09.381+02:00  INFO 32196 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.PersonRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:47:09.382+02:00  INFO 32196 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:47:09.382+02:00  INFO 32196 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
-2026-01-26T15:47:10.257+02:00  INFO 32196 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-01-26T15:47:10.293+02:00  INFO 32196 --- [webshop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-26T15:47:10.294+02:00  INFO 32196 --- [webshop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
-2026-01-26T15:47:10.398+02:00  INFO 32196 --- [webshop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2480 ms
-2026-01-26T15:47:10.809+02:00  INFO 32196 --- [webshop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-26T15:47:10.912+02:00  INFO 32196 --- [webshop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
-2026-01-26T15:47:11.589+02:00  INFO 32196 --- [webshop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-01-26T15:47:11.633+02:00  INFO 32196 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-01-26T15:47:11.861+02:00  INFO 32196 --- [webshop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@20e48e63
-2026-01-26T15:47:11.863+02:00  INFO 32196 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-01-26T15:47:11.948+02:00  INFO 32196 --- [webshop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/veebipood]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 16.2
-	Default catalog/schema: veebipood/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DatasourceConnectionProviderImpl
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-01-26T15:47:13.754+02:00  INFO 32196 --- [webshop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-26T15:47:13.968+02:00  INFO 32196 --- [webshop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T15:47:14.085+02:00  INFO 32196 --- [webshop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-01-26T15:47:15.443+02:00  WARN 32196 --- [webshop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-26T15:47:15.615+02:00  WARN 32196 --- [webshop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 6111290f-e283-4934-86ab-7528462bef30
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-01-26T15:47:15.627+02:00  INFO 32196 --- [webshop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-01-26T15:47:16.957+02:00  INFO 32196 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-01-26T15:47:16.972+02:00  INFO 32196 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Started WebshopApplication in 10.008 seconds (process running for 11.491)
-2026-01-26T15:47:34.923+02:00  INFO 32196 --- [webshop] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-01-26T15:47:34.923+02:00  INFO 32196 --- [webshop] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-01-26T15:47:34.926+02:00  INFO 32196 --- [webshop] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-01-26T15:47:41.098+02:00  INFO 32196 --- [webshop] [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost/127.0.0.1:6379
-2026-01-26T15:47:41.114+02:00  WARN 32196 --- [webshop] [lettuce-nioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [localhost/<unresolved>:6379]: Connection closed prematurely
-
-io.lettuce.core.RedisConnectionException: Connection closed prematurely
-	at io.lettuce.core.protocol.RedisHandshakeHandler.channelInactive(RedisHandshakeHandler.java:76) ~[lettuce-core-6.8.1.RELEASE.jar:6.8.1.RELEASE/ec0535e]
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:250) ~[netty-transport-4.2.7.Final.jar:4.2.7.Final]
-	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:81) ~[netty-transport-4.2.7.Final.jar:4.2.7.Final]
-	at io.lettuce.core.ChannelGroupListener.channelInactive(ChannelGroupListener.java:54) ~[lettuce-core-6.8.1.RELEASE.jar:6.8.1.RELEASE/ec0535e]
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:250) ~[netty-transport-4.2.7.Final.jar:4.2.7.Final]
-	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1424) ~[netty-transport-4.2.7.Final.jar:4.2.7.Final]
-	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:876) ~[netty-transport-4.2.7.Final.jar:4.2.7.Final]
-	at io.netty.channel.AbstractChannel$AbstractUnsafe$8.run(AbstractChannel.java:684) ~[netty-transport-4.2.7.Final.jar:4.2.7.Final]
-	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:148) ~[netty-common-4.2.7.Final.jar:4.2.7.Final]
-	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:141) ~[netty-common-4.2.7.Final.jar:4.2.7.Final]
-	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:535) ~[netty-common-4.2.7.Final.jar:4.2.7.Final]
-	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:201) ~[netty-transport-4.2.7.Final.jar:4.2.7.Final]
-	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1193) ~[netty-common-4.2.7.Final.jar:4.2.7.Final]
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.2.7.Final.jar:4.2.7.Final]
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.2.7.Final.jar:4.2.7.Final]
-	at java.base/java.lang.Thread.run(Thread.java:1447) ~[na:na]
-
-2026-01-26T15:47:43.912+02:00  INFO 32196 --- [webshop] [lettuce-nioEventLoop-4-12] i.l.core.protocol.ReconnectionHandler    : Reconnected to localhost/<unresolved>:6379
-2026-01-26T15:50:04.852+02:00  INFO 32196 --- [webshop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-01-26T15:50:04.870+02:00  INFO 32196 --- [webshop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-01-26T15:50:04.903+02:00  INFO 32196 --- [webshop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T15:50:04.908+02:00  INFO 32196 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-01-26T15:50:04.911+02:00  INFO 32196 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-01-26T15:50:12.208+02:00  INFO 31428 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Starting WebshopApplication using Java 24.0.1 with PID 31428 (C:\Users\Admin\koolitused\backend-12-2025\webshop\target\classes started by Admin in C:\Users\Admin\koolitused\backend-12-2025\webshop)
-2026-01-26T15:50:12.213+02:00  INFO 31428 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : The following 1 profile is active: "prod"
-2026-01-26T15:50:13.277+02:00  INFO 31428 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-01-26T15:50:13.279+02:00  INFO 31428 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-26T15:50:13.509+02:00  INFO 31428 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 220 ms. Found 4 JPA repository interfaces.
-2026-01-26T15:50:13.575+02:00  INFO 31428 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-01-26T15:50:13.577+02:00  INFO 31428 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2026-01-26T15:50:13.597+02:00  INFO 31428 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.CategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:50:13.599+02:00  INFO 31428 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:50:13.599+02:00  INFO 31428 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.PersonRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:50:13.599+02:00  INFO 31428 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T15:50:13.599+02:00  INFO 31428 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
-2026-01-26T15:50:14.514+02:00  INFO 31428 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-01-26T15:50:14.545+02:00  INFO 31428 --- [webshop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-26T15:50:14.545+02:00  INFO 31428 --- [webshop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
-2026-01-26T15:50:14.715+02:00  INFO 31428 --- [webshop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2419 ms
-2026-01-26T15:50:14.946+02:00  INFO 31428 --- [webshop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-26T15:50:15.020+02:00  INFO 31428 --- [webshop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
-2026-01-26T15:50:15.603+02:00  INFO 31428 --- [webshop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-01-26T15:50:15.649+02:00  INFO 31428 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-01-26T15:50:15.848+02:00  INFO 31428 --- [webshop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@27b7204
-2026-01-26T15:50:15.851+02:00  INFO 31428 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-01-26T15:50:15.939+02:00  INFO 31428 --- [webshop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/veebipood]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 16.2
-	Default catalog/schema: veebipood/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DatasourceConnectionProviderImpl
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-01-26T15:50:17.533+02:00  INFO 31428 --- [webshop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-26T15:50:17.713+02:00  INFO 31428 --- [webshop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T15:50:17.805+02:00  INFO 31428 --- [webshop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-01-26T15:50:18.775+02:00  WARN 31428 --- [webshop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-26T15:50:18.911+02:00  WARN 31428 --- [webshop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: af30f1d0-25ce-494b-a4d9-b429b29a808a
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-01-26T15:50:18.921+02:00  INFO 31428 --- [webshop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-01-26T15:50:19.801+02:00  INFO 31428 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-01-26T15:50:19.813+02:00  INFO 31428 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Started WebshopApplication in 8.249 seconds (process running for 9.258)
-2026-01-26T15:50:33.123+02:00  INFO 31428 --- [webshop] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-01-26T15:50:33.123+02:00  INFO 31428 --- [webshop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-01-26T15:50:33.125+02:00  INFO 31428 --- [webshop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-01-26T16:06:53.725+02:00  INFO 31428 --- [webshop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-01-26T16:06:53.738+02:00  INFO 31428 --- [webshop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-01-26T16:06:53.773+02:00  INFO 31428 --- [webshop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T16:06:53.777+02:00  INFO 31428 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-01-26T16:06:53.781+02:00  INFO 31428 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-01-26T16:07:00.184+02:00  INFO 34620 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Starting WebshopApplication using Java 24.0.1 with PID 34620 (C:\Users\Admin\koolitused\backend-12-2025\webshop\target\classes started by Admin in C:\Users\Admin\koolitused\backend-12-2025\webshop)
-2026-01-26T16:07:00.188+02:00  INFO 34620 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : The following 1 profile is active: "prod"
-2026-01-26T16:07:01.190+02:00  INFO 34620 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-01-26T16:07:01.192+02:00  INFO 34620 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-26T16:07:01.402+02:00  INFO 34620 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 198 ms. Found 4 JPA repository interfaces.
-2026-01-26T16:07:01.459+02:00  INFO 34620 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-01-26T16:07:01.460+02:00  INFO 34620 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2026-01-26T16:07:01.483+02:00  INFO 34620 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.CategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T16:07:01.485+02:00  INFO 34620 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T16:07:01.485+02:00  INFO 34620 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.PersonRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T16:07:01.485+02:00  INFO 34620 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T16:07:01.485+02:00  INFO 34620 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
-2026-01-26T16:07:02.398+02:00  INFO 34620 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-01-26T16:07:02.421+02:00  INFO 34620 --- [webshop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-26T16:07:02.422+02:00  INFO 34620 --- [webshop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
-2026-01-26T16:07:02.502+02:00  INFO 34620 --- [webshop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2232 ms
-2026-01-26T16:07:02.719+02:00  INFO 34620 --- [webshop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-26T16:07:02.844+02:00  INFO 34620 --- [webshop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
-2026-01-26T16:07:03.618+02:00  INFO 34620 --- [webshop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-01-26T16:07:03.668+02:00  INFO 34620 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-01-26T16:07:03.927+02:00  INFO 34620 --- [webshop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@565efd7d
-2026-01-26T16:07:03.930+02:00  INFO 34620 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-01-26T16:07:04.049+02:00  INFO 34620 --- [webshop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/veebipood]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 16.2
-	Default catalog/schema: veebipood/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DatasourceConnectionProviderImpl
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-01-26T16:07:06.317+02:00  INFO 34620 --- [webshop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-26T16:07:06.568+02:00  INFO 34620 --- [webshop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T16:07:06.796+02:00  INFO 34620 --- [webshop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-01-26T16:07:08.335+02:00  WARN 34620 --- [webshop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-26T16:07:08.518+02:00  WARN 34620 --- [webshop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 955fc038-9bce-45ef-b8ca-1281a1510430
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-01-26T16:07:08.531+02:00  INFO 34620 --- [webshop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-01-26T16:07:09.620+02:00  INFO 34620 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-01-26T16:07:09.638+02:00  INFO 34620 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Started WebshopApplication in 10.118 seconds (process running for 11.24)
-2026-01-26T16:08:37.721+02:00  INFO 34620 --- [webshop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-01-26T16:08:37.736+02:00  INFO 34620 --- [webshop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-01-26T16:08:37.768+02:00  INFO 34620 --- [webshop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T16:08:37.774+02:00  INFO 34620 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-01-26T16:08:37.779+02:00  INFO 34620 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-01-26T16:08:44.071+02:00  INFO 11944 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Starting WebshopApplication using Java 24.0.1 with PID 11944 (C:\Users\Admin\koolitused\backend-12-2025\webshop\target\classes started by Admin in C:\Users\Admin\koolitused\backend-12-2025\webshop)
-2026-01-26T16:08:44.076+02:00  INFO 11944 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : The following 1 profile is active: "prod"
-2026-01-26T16:08:45.021+02:00  INFO 11944 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-01-26T16:08:45.024+02:00  INFO 11944 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-26T16:08:45.366+02:00  INFO 11944 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 325 ms. Found 4 JPA repository interfaces.
-2026-01-26T16:08:45.455+02:00  INFO 11944 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-01-26T16:08:45.458+02:00  INFO 11944 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2026-01-26T16:08:45.494+02:00  INFO 11944 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.CategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T16:08:45.498+02:00  INFO 11944 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T16:08:45.499+02:00  INFO 11944 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.PersonRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T16:08:45.501+02:00  INFO 11944 --- [webshop] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ee.mihkel.webshop.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-01-26T16:08:45.501+02:00  INFO 11944 --- [webshop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
-2026-01-26T16:08:46.247+02:00  INFO 11944 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-01-26T16:08:46.262+02:00  INFO 11944 --- [webshop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-26T16:08:46.262+02:00  INFO 11944 --- [webshop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
-2026-01-26T16:08:46.321+02:00  INFO 11944 --- [webshop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2164 ms
-2026-01-26T16:08:46.485+02:00  INFO 11944 --- [webshop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-26T16:08:46.553+02:00  INFO 11944 --- [webshop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
-2026-01-26T16:08:47.105+02:00  INFO 11944 --- [webshop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-01-26T16:08:47.148+02:00  INFO 11944 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-01-26T16:08:47.340+02:00  INFO 11944 --- [webshop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@31b91435
-2026-01-26T16:08:47.344+02:00  INFO 11944 --- [webshop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-01-26T16:08:47.419+02:00  INFO 11944 --- [webshop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/veebipood]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 16.2
-	Default catalog/schema: veebipood/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DatasourceConnectionProviderImpl
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-01-26T16:08:49.325+02:00  INFO 11944 --- [webshop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-26T16:08:49.541+02:00  INFO 11944 --- [webshop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T16:08:49.668+02:00  INFO 11944 --- [webshop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-01-26T16:08:50.784+02:00  WARN 11944 --- [webshop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-26T16:08:50.911+02:00  WARN 11944 --- [webshop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 006fdd76-16e4-4ee2-946a-109081e42486
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-01-26T16:08:50.921+02:00  INFO 11944 --- [webshop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-01-26T16:08:51.817+02:00  INFO 11944 --- [webshop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-01-26T16:08:51.835+02:00  INFO 11944 --- [webshop] [main] ee.mihkel.webshop.WebshopApplication     : Started WebshopApplication in 8.391 seconds (process running for 9.413)
-2026-01-26T18:11:28.103+02:00  INFO 11944 --- [webshop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-01-26T18:11:28.110+02:00  INFO 11944 --- [webshop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-01-26T18:11:28.124+02:00  INFO 11944 --- [webshop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26T18:11:28.126+02:00  INFO 11944 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-01-26T18:11:28.127+02:00  INFO 11944 --- [webshop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-02-02T13:49:28.079+02:00  WARN 12340 --- [webshop] [http-nio-8080-exec-2] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2026-02-02T13:49:33.333+02:00  WARN 12340 --- [webshop] [http-nio-8080-exec-4] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2026-02-02T13:49:37.618+02:00  WARN 12340 --- [webshop] [http-nio-8080-exec-5] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
