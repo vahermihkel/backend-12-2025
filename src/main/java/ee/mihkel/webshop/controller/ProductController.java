@@ -13,7 +13,7 @@ import java.util.Optional;
 import java.util.concurrent.ExecutionException;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:5173")
+//@CrossOrigin(origins = "http://localhost:5173")
 public class ProductController {
 
     @Autowired
