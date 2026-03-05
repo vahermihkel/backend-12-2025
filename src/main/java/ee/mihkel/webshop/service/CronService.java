@@ -1,7 +1,12 @@
 package ee.mihkel.webshop.service;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 public class CronService {
@@ -32,5 +37,30 @@ public class CronService {
     @Scheduled(cron = "0 0 17 LW * *")
     public void runAtLastWorkdayOfMonth(){
         System.out.println("Sending report...");
+    }
+
+
+    @Value("${cron.5min.urls:}")
+    private List<String> urls;
+
+    @Value("${cron.type:}")
+    private String type;
+
+    @Scheduled(cron = "${cron.expression:0 */5 * * * *}")
+    public void adjustableCron() {
+       if (type.equals("cleaning")) {
+           //
+       } else if (type.equals("")) {
+
+       }
+    }
+
+    private final RestTemplate restTemplate = new RestTemplate();
+
+    @Scheduled(cron = "0 */10 * * * *")
+    public void callUrlEveryTenMinutes() {
+        String url = "https://backend-serverisse-ickb.onrender.com/products";
+        restTemplate.getForObject(url, String.class);
+        System.out.println(LocalDateTime.now() + " - Called " + url + " -> OK");
     }
 }

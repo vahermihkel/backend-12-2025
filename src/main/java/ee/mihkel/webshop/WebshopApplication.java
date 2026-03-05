@@ -3,11 +3,13 @@ package ee.mihkel.webshop;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling
 @EnableCaching
+@EnableJpaAuditing
 public class WebshopApplication {
 
 	public static void main(String[] args) {
@@ -28,15 +30,15 @@ public class WebshopApplication {
     //12.N 15.01 - 13.00 auth -> JWT token, MINU tellimused. profiil.
     //13.E 19.01 - 13.00 auth -> front-endis kinni, rollid (ei saa teatud URL-dele ja nuppe näha)
     //14.N 22.01 - 13.00 erinevad keskkonnad. rollid, aegumine, auth parandused
-    //15.E 26.01 - 13.00 CRON, cache (Google Guava, Redis), emaili saamine.
-    //16.E 02.02 - 13.00 automaatne andmebaasis lastUpdated, created, docker, serverisse ülespanek
+    //15.E 26.01 - 13.00 CRON, cache (Google Guava, Redis).
+    //16.E 02.02 - 13.00 emaili saamine. docker, serverisse ülespanek
     // Render.com või AWS või Oracle trial
-    //17.E 09.02 - 13.00 WebSocket
+    //17.E 09.02 - 13.00 WebSocket, automaatne andmebaasis lastUpdated, created.
     //18.K 18.02 - 13.00-14.30 Lõpuprojekt päev
 }
 
-// CRON failist
-// Reacti warning useEffect()
-// Websocket front-end oleks ilus
-// Render/AWS/Oracle
-// Non-null type argument is expected - Spring 4.0
+// CRON failist++++
+// Reacti warning useEffect()++++
+// Websocket front-end oleks ilus++++
+// Render/AWS/Oracle++++
+// Non-null type argument is expected - Spring 4.0++++
